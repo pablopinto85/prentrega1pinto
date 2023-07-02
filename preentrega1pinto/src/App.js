@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Carro from './components/Carritocompra';
+import ItemListContainer from './components/ItemListContainer';
+import Footer from './components/Footer';
 
-const App = () => {
+function App() {
+  const welcomeMessage = "Bienvenido(a) a Joyas Magnolia";
   return (
-    <div className="App">
-      <Navbar />
-      <h1>Bienvenido a Joyas Magnolia</h1>
-      <h3>Venta de joyas de Oro, Plata y Acero Quirurgico, diseños finos y exclusivos</h3>
+    <div>
+      <Navbar/>
+      <Carro/>
+      <ItemListContainer welcomeMessage={welcomeMessage} />
+      <Footer/>
     </div>
   );
-};
+}
 
 export default App;
